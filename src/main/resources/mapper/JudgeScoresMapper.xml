@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ncc.nccsystem.mapper.JudgeScoresMapper">
+
+    <select id="calculateFinalScore" resultType="com.ncc.nccsystem.domain.entity.JudgeScores">
+        SELECT id_card, AVG(discussion_score) AS discussion_score, AVG(interview_score) AS interview_score
+        FROM judge_scores
+        GROUP BY id_card;
+    </select>
+
+</mapper>

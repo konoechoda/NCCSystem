@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ncc.nccsystem.mapper.CounselorsMapper">
+
+    <select id="selectNumberOfCountByScore" resultType="com.ncc.nccsystem.domain.entity.Counselors">
+        SELECT counselors.id, counselors.school_id, counselors.name, counselors.id_card, counselors.grouping, counselors.registration_time
+        FROM counselors
+                 INNER JOIN scores ON counselors.name = scores.counselor_name AND counselors.id_card = scores.id_card AND scores.grouping = #{groupName}
+        ORDER BY scores.written_test_score DESC
+            LIMIT #{number};
+    </select>
+</mapper>
