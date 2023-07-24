@@ -1,7 +1,7 @@
 # NCCSystem
 ## 辅导员素质评比大赛系统
 ###   - 演示视频 
-
+[Logout](https://github.com/konoechoda/NCCSystem/blob/master/Demo%20video/Logout.mp4)。
 
 
 ###   - 接口文档地址
