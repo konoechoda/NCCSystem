@@ -1,8 +1,24 @@
 # NCCSystem
 ## 辅导员素质评比大赛系统
 ###   - 演示视频 
-[Logout](https://github.com/konoechoda/NCCSystem/blob/master/Demo%20video/Logout.mp4)。
-
+- 用户接口
+	- 登录接口: [doLogin](https://github.com/konoechoda/NCCSystem/blob/master/Demo%20video/doLogin.mp4)
+	- 注销接口: [Logout](https://github.com/konoechoda/NCCSystem/blob/master/Demo%20video/Logout.mp4)
+   	- 笔试评分接口: [writtenJudge](https://github.com/konoechoda/NCCSystem/raw/master/Demo%20video/writtenJudge.mp4)
+	- 评分接口: [judge](https://github.com/konoechoda/NCCSystem/raw/master/Demo%20video/judge.mp4)
+ - 第一轮
+ 	- 第一轮随机分组: [randomGroup](https://github.com/konoechoda/NCCSystem/raw/master/Demo%20video/randomGroup.mp4)
+  	- 笔试成绩excel导入: [importScore](https://github.com/konoechoda/NCCSystem/raw/master/Demo%20video/importScore.mp4)
+- 第二轮
+	- 第二轮随机抽签: [secondRoundDraw](https://github.com/konoechoda/NCCSystem/raw/master/Demo%20video/secondRoundDraw.mp4)
+ 	- 谈心谈话签号顺序: [discussionRound](https://github.com/konoechoda/NCCSystem/raw/master/Demo%20video/discussionRound.mp4)
+- 辅导员接口
+	- 辅导员报名: [register](https://github.com/konoechoda/NCCSystem/raw/master/Demo%20video/register.mp4)
+ 	- 删除辅导员报名信息: [delete](https://github.com/konoechoda/NCCSystem/raw/master/Demo%20video/delete.mp4)
+  	- 根据姓名查询辅导员报名信息: [queryByName](https://github.com/konoechoda/NCCSystem/raw/master/Demo%20video/queryByName.mp4)
+  	- 根据身份证查询辅导员报名信息: [queryByIdCard](https://github.com/konoechoda/NCCSystem/raw/master/Demo%20video/queryByIdCard.mp4)
+- 导出最终结果
+	- 导出.pdf: [exportPdf](https://github.com/konoechoda/NCCSystem/raw/master/Demo%20video/exportPdf.mp4)
 
 ###   - 接口文档地址
 
@@ -10,7 +26,7 @@
 
 *ps:Swagger确实是个好东西*
 
-[接口文档地址]: http://localhost:8082/swagger-ui.html#/
+[接口文档地址(本地链接)](http://localhost:8082/swagger-ui.html#/)
 
 ###   - 项目介绍
 
