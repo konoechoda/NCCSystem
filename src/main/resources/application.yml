@@ -3,14 +3,14 @@ server:
 Spring:
   datasource:
     url: jdbc:mysql://localhost:3306/NCCSystem?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
-    username: root
-    password: numk423
+    username: 
+    password: 
     driver-class-name: com.mysql.cj.jdbc.Driver
   rabbitmq:
-    host: 192.168.137.106
-    port: 5672
-    username: guest
-    password: guest
+    host: 
+    port: 
+    username: 
+    password: 
     #这个配置是保证提供者确保消息推送到交换机中，不管成不成功，都会回调
     publisher-confirm-type: correlated
     #保证交换机能把消息推送到队列中
