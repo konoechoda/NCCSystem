@@ -61,6 +61,25 @@ public class FirstRoundServiceImpl extends ServiceImpl<FirstRoundMapper, FirstRo
             default:
                 return SaResult.error("分组名称错误");
         }
+
+        //判断是否有分组数据
+        List<FirstRound> grouping1 = this.query()
+                .eq("grouping", grouping)
+                .list();
+        if (grouping1.size() > 0) {
+            //返回分组数据
+            List<DrawingResultVo> drawingResultVos = grouping1.stream()
+                    .map(firstRound -> {
+                        DrawingResultVo drawingResultVo = new DrawingResultVo();
+                        drawingResultVo.setCounselorName(counselorsService.getById(firstRound.getCounselorId()).getName());
+                        drawingResultVo.setSchoolName(userService.getById(counselorsService.getById(firstRound.getCounselorId()).getSchoolId()).getUserName());
+                        drawingResultVo.setDrawNumber(firstRound.getDrawNumber());
+                        return drawingResultVo;
+                    })
+                    .collect(Collectors.toList());
+            return SaResult.data(drawingResultVos);
+        }
+        
         //获取所有符合分组条件的辅导员
         List<FirstRound> firstRounds = counselorsService.query()
                 .eq("grouping", grouping)
