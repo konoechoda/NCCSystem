@@ -1,5 +1,5 @@
 # NCCSystem
-## 辅导员素质评比大赛系统
+## 辅导员素质评比大赛系统╰(*°▽°*)╯
 ###   - 演示视频 
 - 用户接口
 	- 登录接口: [doLogin](https://github.com/konoechoda/NCCSystem/blob/master/Demo%20video/doLogin.mp4)
