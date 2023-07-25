@@ -48,6 +48,24 @@ public class SecondRoundServiceImpl extends ServiceImpl<SecondRoundMapper, Secon
                return SaResult.error("分组名称错误");
         }
 
+        //查询是否已经分组
+        List<SecondRound> s = this.query().eq("grouping", grouping).list();
+        
+        if (s.size() > 0) {
+            //返回分组结果
+            List<SecondRoundVo> sVo = BeanCopyUtils.copyBeanList(s, SecondRoundVo.class);
+
+            int pageSize = SystemConstants.DRAWING_LIMIT; // 每页的大小
+
+            //将List分页
+            List<List<SecondRoundVo>> paginatedList = IntStream.range(0, (sVo.size() + pageSize - 1) / pageSize)
+                    .mapToObj(i -> sVo.subList(i * pageSize, Math.min((i + 1) * pageSize, sVo.size())))
+                    .collect(Collectors.toList());
+
+            return SaResult.data(paginatedList);
+        }
+
+        
         //抽取该分组下笔试成绩前三十名
         List<Counselors> counselors = counselorsService.selectNumberOfCountByScore(SystemConstants.SECOND_ROUND_LIMIT, grouping);
 
