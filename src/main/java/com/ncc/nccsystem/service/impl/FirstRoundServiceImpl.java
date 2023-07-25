@@ -66,7 +66,7 @@ public class FirstRoundServiceImpl extends ServiceImpl<FirstRoundMapper, FirstRo
         List<FirstRound> grouping1 = this.query()
                 .eq("grouping", grouping)
                 .list();
-        if (grouping1.size() > 0) {
+        if (Objects.nonNull(grouping1) && grouping1.size() > 0) {
             //返回分组数据
             List<DrawingResultVo> drawingResultVos = grouping1.stream()
                     .map(firstRound -> {
