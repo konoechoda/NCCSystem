@@ -61,6 +61,15 @@ public class GroupingUtils {
             }
         }
 
+        //清空resultList中的空白counselors(基本不会出现该情况)
+        // for (int i = 0; i < resultList.size(); i++) {
+        //     for (int j = 0; j < resultList.get(i).size(); j++) {
+        //         if(Objects.equals(resultList.get(i).get(j).getSchoolId(), SystemConstants.BLANK_SCHOOL_ID)){
+        //             resultList.get(i).remove(j);
+        //         }
+        //     }
+        // }
+
         //调整resultList,保证三个list不会出现首尾相同的情况
         for (int i = 0; i < resultList.size()-1; i++) {
             if(Objects.equals(resultList.get(i).get(resultList.get(i).size() - 1).getSchoolId(), resultList.get(i + 1).get(0).getSchoolId())){
