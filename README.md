@@ -27,7 +27,7 @@
 *ps:Swagger确实是个好东西😊*
 - 文档地址:
  	- [接口文档地址](http://htmlpreview.github.io/?https://github.com/konoechoda/NCCSystem/blob/master/apiDoc/Swagger%20UI.html)
-  	- [接口文档地址(本地链接)](http://localhost:8082/swagger-ui.html#/)
+  	- [接口文档地址(本地)](http://localhost:8082/swagger-ui.html#/)
 
 ###   - 项目介绍
 
